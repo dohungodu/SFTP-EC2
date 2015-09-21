@@ -1,0 +1,16 @@
+Basic instalation
+http://ostechnix.com/2013/12/15/setup-ftp-server-step-by-step-in-centos-6-x-rhel-6-x-scientific-linux-6-x/
+
+ssh instalation (putty setup)
+http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html
+
+
+Passive mode installation:
+https://www.gosquared.com/blog/fix-ftp-passive-mode-problems-on-amazon-ec2-instances
+
+Change root password for ec2
+
+
+Create accounts for FTP
+
+
