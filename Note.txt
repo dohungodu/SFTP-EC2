@@ -1,18 +1,19 @@
 Access to server.
 
-1. Putty: add public key.
+1. Putty: convert private key
 
-update server
+2. Connect by ssh in macbook or unix
+
+ssh -i "sftp_key.pem" ec2-user@52.89.111.7
+
+3. update server
 sudo yum update
-
-
 
 Basic instalation
 http://ostechnix.com/2013/12/15/setup-ftp-server-step-by-step-in-centos-6-x-rhel-6-x-scientific-linux-6-x/
 
 ssh instalation (putty setup)
 http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html
-
 
 Passive mode installation:
 https://www.gosquared.com/blog/fix-ftp-passive-mode-problems-on-amazon-ec2-instances
