@@ -23,4 +23,6 @@ Change root password for ec2
 
 Create accounts for FTP
 
+Create local key pairs and update to server the public key
+https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2
 
