@@ -23,7 +23,7 @@ sudo usermod -G sftp sftp-user
 
 sudo chown sftp-user:sftp /data
 
-Match Group sftp
+Match User sftp-user
         ChrootDirectory /data/%u
         ForceCommand internal-sftp
         AllowTcpForwarding no
