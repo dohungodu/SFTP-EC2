@@ -1,7 +1,9 @@
 Access to server.
 
 attach volume 50G
+
 http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html
+
 Notice: if you want to add a volume with data, the procedure will be slighly different
 
 2. Connect by ssh in macbook or unix
