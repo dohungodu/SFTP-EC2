@@ -1,17 +1,26 @@
-Access to server.
+#Create an instance
+1. Select instance type
+2. Notice about the zone of instance
+3. Add public IP
+4. Attached public IP to instance
+5. Add new data volume (50G)
 
-attach volume 50G
-
+See the link below for more information:
 http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html
-
 Notice: if you want to add a volume with data, the procedure will be slighly different
 
-2. Connect by ssh in macbook or unix
-ssh -i "sftp_key.pem" ec2-user@52.89.111.7
+#PGP (Pretty Good Privacy)
+1. Upload public key if you have one.
+2. Create key pairs and save the private key in a safe place.
 
-Create local key pairs and update to server the public key
+#Connect by ssh in macbook or unix
+ssh -i "sftp_key.pem" ec2-user@52.89.111.7
+Note: putty will use RSA key so need to convert .pem key to .ppk type and save public key
+
+Link for reference:
 https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2
-#Install
+
+#Other updates
 ##update server
 ```
 sudo yum update
