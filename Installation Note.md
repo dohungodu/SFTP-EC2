@@ -23,10 +23,13 @@ Notice: if you want to add a volume with data, the procedure will be slighly dif
 
 ##Connect to the server 
 1. Macbook or unix
+2. 
 ... Run this script
+
 ```
 ssh -i "private_key.pem" ec2-user@public_ip
 ```
+
 2. By windows using Putty or SecureShell (those can support connect ssh with PGP keys) 
 
 3. Note: putty will use RSA key so need to convert .pem key to .ppk type and save public key
