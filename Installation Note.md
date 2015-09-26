@@ -27,7 +27,7 @@ Notice: if you want to add a volume with data, the procedure will be slighly dif
 - Run this script
 
 ```
-ssh -i "private_key.pem" ec2-user@public_ip
+- ssh -i "private_key.pem" ec2-user@public_ip
 ```
 
 2. By windows using Putty or SecureShell (those can support connect ssh with PGP keys) 
