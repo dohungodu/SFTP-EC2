@@ -1,10 +1,17 @@
 Access to server.
 
-1. Putty: convert private key
+attach volume 50G
+http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html
 
 2. Connect by ssh in macbook or unix
-
 ssh -i "sftp_key.pem" ec2-user@52.89.111.7
+
+3. windows putty
+
+mkdir .ssh
+
+Create local key pairs and update to server the public key
+https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2
 
 3. update server
 sudo yum update
@@ -20,13 +27,40 @@ sudo useradd sftp-user
 sudo groupadd sftp
 
 sudo usermod -G sftp sftp-user
+sudo usermod -d /data sftp-user
 
-sudo chown sftp-user:sftp /data
+http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/managing-users.html
 
-Match User sftp-user
-        ChrootDirectory /data/%u
-        ForceCommand internal-sftp
-        AllowTcpForwarding no
+sudo adduser lien
+sudo su - lien
+mkdir .ssh
+chmod 700 .ssh
+touch .ssh/authorized_keys
+chmod 600 .ssh/authorized_keys
+vi .ssh/authorized_keys 
+
+sudo usermod -G sftponly lien
+
+ Match Group sftponly
+   ChrootDirectory /data
+   ForceCommand internal-sftp
+   AllowTcpForwarding no
+   PermitTunnel no
+   X11Forwarding no
+
+Match User username
+   ChrootDirectory %h
+   ForceCommand internal-sftp
+   AllowTcpForwarding no
+   PermitTunnel no
+   X11Forwarding no
+
+sudo vi /etc/ssh/sshd_config
+sudo service sshd restart
+
+
+check owner of /data folder
+check owner of /data/upload folder
 
 Create local key pairs and update to server the public key
 https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2
