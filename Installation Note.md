@@ -21,12 +21,11 @@ http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html
 https://www.gosquared.com/blog/fix-ftp-passive-mode-problems-on-amazon-ec2-instances
 
 ##Add new sftp group
-`
-sudo useradd sftp-user
-sudo groupadd sftp
-sudo usermod -G sftp sftp-user
-sudo usermod -d /data sftp-user
-`
+`sudo useradd sftp-user
+`sudo groupadd sftp
+`sudo usermod -G sftp sftp-user
+`sudo usermod -d /data sftp-user
+
 ##Add new sftp user
 http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/managing-users.html
 `
