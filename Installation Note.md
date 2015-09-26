@@ -24,7 +24,7 @@ Notice: if you want to add a volume with data, the procedure will be slighly dif
 ##Connect to the server 
 1. Macbook or unix
 2. 
-... Run this script
+...Run this script
 
 ```
 ssh -i "private_key.pem" ec2-user@public_ip
