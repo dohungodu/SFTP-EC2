@@ -11,9 +11,9 @@ Create local key pairs and update to server the public key
 https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2
 #Install
 ##update server
-`
+```
 sudo yum update
-`
+```
 ##Local instalation (putty setup)
 http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html
 
@@ -21,14 +21,16 @@ http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html
 https://www.gosquared.com/blog/fix-ftp-passive-mode-problems-on-amazon-ec2-instances
 
 ##Add new sftp group
-`sudo useradd sftp-user
-`sudo groupadd sftp
-`sudo usermod -G sftp sftp-user
-`sudo usermod -d /data sftp-user
+```
+sudo useradd sftp-user
+sudo groupadd sftp
+sudo usermod -G sftp sftp-user
+sudo usermod -d /data sftp-user
+```
 
 ##Add new sftp user
 http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/managing-users.html
-`
+```
 sudo adduser lien
 sudo su - lien
 mkdir .ssh
@@ -37,28 +39,29 @@ touch .ssh/authorized_keys
 chmod 600 .ssh/authorized_keys
 vi .ssh/authorized_keys 
 sudo usermod -G sftponly lien
-`
+```
 ##Change user policy
-`
+```
 sudo vi /etc/ssh/sshd_config
-`
+```
 ###For a group
-`
+```
  Match Group sftponly
    ChrootDirectory /data
    ForceCommand internal-sftp
    AllowTcpForwarding no
    PermitTunnel no
    X11Forwarding no
-`
+```
 ###For a user
-`Match User username
+```
+Match User username
    ChrootDirectory %h
    ForceCommand internal-sftp
    AllowTcpForwarding no
    PermitTunnel no
    X11Forwarding no
-`
+```
 
 sudo service sshd restart
 
