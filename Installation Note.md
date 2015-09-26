@@ -1,4 +1,12 @@
-#Create an instance
+##Intro
+This installation note created by Hung Do - Old Dominion University
+
+Email me if you have any questions
+
+Email: ```hdo``` at ```cs``` dot ```odu``` dot ```edu```
+
+
+##Create an instance
 1. Select instance type
 2. Notice about the zone of instance
 3. Add public IP
@@ -9,11 +17,11 @@ See the link below for more information:
 http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html
 Notice: if you want to add a volume with data, the procedure will be slighly different
 
-#PGP (Pretty Good Privacy)
+##PGP (Pretty Good Privacy)
 1. Upload public key if you have one.
 2. Create key pairs and save the private key in a safe place.
 
-#Connect by ssh in macbook or unix
+##Connect by ssh in macbook or unix
 ```
 ssh -i "private_key.pem" ec2-user@public_ip
 ```
@@ -22,7 +30,6 @@ Note: putty will use RSA key so need to convert .pem key to .ppk type and save p
 Link for reference:
 https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2
 
-#Other updates
 ##update server
 ```
 sudo yum update
