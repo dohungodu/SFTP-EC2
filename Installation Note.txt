@@ -9,7 +9,7 @@ ssh -i "sftp_key.pem" ec2-user@52.89.111.7
 
 Create local key pairs and update to server the public key
 https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2
-
+#Install
 3. update server
 sudo yum update
 
