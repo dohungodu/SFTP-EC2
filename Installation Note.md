@@ -74,11 +74,14 @@ Match User username
    X11Forwarding no
 ```
 
+###Restart ssh service
+```
 sudo service sshd restart
+```
 
+Check owner of ```/data``` folder
 
-check owner of /data folder
-check owner of /data/upload folder
+Check owner of ``/data/upload``` folder
 
 Create local key pairs and update to server the public key
 https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2
