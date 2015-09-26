@@ -23,6 +23,7 @@ Notice: if you want to add a volume with data, the procedure will be slighly dif
 
 ##Connect to the server 
 1. Macbook or unix
+
 ...Run this script
 
 ```
