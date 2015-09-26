@@ -14,7 +14,9 @@ Notice: if you want to add a volume with data, the procedure will be slighly dif
 2. Create key pairs and save the private key in a safe place.
 
 #Connect by ssh in macbook or unix
-ssh -i "sftp_key.pem" ec2-user@52.89.111.7
+```
+ssh -i "private_key.pem" ec2-user@public_ip
+```
 Note: putty will use RSA key so need to convert .pem key to .ppk type and save public key
 
 Link for reference:
