@@ -33,6 +33,29 @@ chmod 400 "private_key.pem"
 ```
 ssh -i "private_key.pem" ec2-user@public_ip
 ```
+##To chroot an SFTP directory, you must
+
+Create an user and force root to be owner of it
+```
+cd /home
+mkdir john
+useradd -d /home/john -M -N -g users john
+sudo chown root:root /home/john
+sudo chmod 755 /home/john
+```
+Change the subsystem location on /etc/ssh/sshd_config:
+```
+#Subsystem sftp /usr/lib/openssh/sftp-server
+Subsystem sftp internal-sftp
+```
+and create a user section at the end of the file (ssh can die respawning if placed after Subsystem line):
+```
+Match User john
+ChrootDirectory /home/john
+ForceCommand internal-sftp
+AllowTCPForwarding no
+X11Forwarding no
+```
 
 2. By windows using Putty or SecureShell (those can support connect ssh with PGP keys) 
 
