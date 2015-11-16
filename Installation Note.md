@@ -24,10 +24,14 @@ Notice: if you want to add a volume with data, the procedure will be slighly dif
 ##Connect to the server 
 1. Macbook or unix
 
-- Run this script
-
+- Remember chmod for the file_key
 ```
-- ssh -i "private_key.pem" ec2-user@public_ip
+chmod 400 "private_key.pem"
+```
+
+- Run this script
+```
+ssh -i "private_key.pem" ec2-user@public_ip
 ```
 
 2. By windows using Putty or SecureShell (those can support connect ssh with PGP keys) 
